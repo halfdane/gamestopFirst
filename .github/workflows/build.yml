@@ -3,6 +3,14 @@ on: [push, workflow_dispatch]
 jobs:
   test:
     runs-on: ubuntu-latest
+    environment: live
+    steps:
+      - uses: actions/checkout@v1.0.0
+      - run: |
+          ls
+          pwd
+  build:
+    runs-on: ubuntu-latest
     environment: develop
     steps:
       # pack zip and read manifest, can be reused in the following steps
