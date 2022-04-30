@@ -16,7 +16,7 @@ jobs:
           zipFilePath: 'build/extension.zip'
 
       - name: create crx extension
-        uses: cardinalby/webext-buildtools-chrome-crx-action@v2
+        uses: cardinalby/webext-buildtools-chrome-crx-action@6ffc20d012116ea3fa0c6697382b026fc7df9535
         with:
           # zip file made at the packExtensionDir step
           zipFilePath: 'build/extension.zip'
