@@ -23,8 +23,10 @@ jobs:
           crxFilePath: 'build/gamestopFirst.crx'
           privateKey: ${{ secrets.CHROME_CRX_PRIVATE_KEY }}
 
-      - name: Release
-        uses: softprops/action-gh-release@v1
+
+      - uses: actions/upload-artifact@v3
         with:
-          files: build/gamestopFirst.crx
+          name: gamestopFirst.crx
+          path: build/gamestopFirst.crx
+
 
