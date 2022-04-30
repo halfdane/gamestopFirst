@@ -20,6 +20,11 @@ jobs:
         with:
           # zip file made at the packExtensionDir step
           zipFilePath: 'build/extension.zip'
-          crxFilePath: 'build/extension.crx'
+          crxFilePath: 'build/gamestopFirst.crx'
           privateKey: ${{ secrets.CHROME_CRX_PRIVATE_KEY }}
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: build/gamestopFirst.crx
 
