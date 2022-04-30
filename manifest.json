@@ -1,0 +1,16 @@
+{
+  "name": "GameStop first",
+  "description": "Everything you're looking for - look on gamestop.com first!",
+  "version": "0.1",
+  "manifest_version": 3,
+  "icons": { "16": "halfdane.png", "48": "halfdane.png", "128": "halfdane.png" },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.google.com/search*"],
+      "js": ["content.js"]
+    }
+  ]
+}
